@@ -250,6 +250,11 @@ module.exports = function(grunt) {
                     grunt.log.write('apple-touch-icon-152x152-precomposed.png... ');
                     convert(combine(source, f.dest, "152x152", "apple-touch-icon-152x152-precomposed.png", additionalOpts, options.appleTouchPadding));
                     grunt.log.ok();
+
+                    // 180x180: iPhone 6 Plus retina iOS 8 and higher
+                    grunt.log.write('apple-touch-icon-180x180-precomposed.png... ');
+                    convert(combine(source, f.dest, "180x180", "apple-touch-icon-180x180-precomposed.png", additionalOpts, options.appleTouchPadding));
+                    grunt.log.ok();
                 }
 
                 // 228x228: Coast
@@ -265,7 +270,7 @@ module.exports = function(grunt) {
                     convert(combine(source, f.dest, "192x192", "homescreen-192x192.png", additionalOpts));
                     grunt.log.ok();
                 }
-                
+
                 // Android Icons app
                 if (options.androidIcons) {
                     // 36x36: LDPI
